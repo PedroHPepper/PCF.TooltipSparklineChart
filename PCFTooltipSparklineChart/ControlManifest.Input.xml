@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="Pepper" constructor="PCFTooltipSparklineChart" version="0.0.1" display-name-key="PCFTooltipSparklineChart" description-key="PCFTooltipSparklineChart description" control-type="standard" >
+    <property name="NumberSet" display-name-key="NumberSet" description-key="Bind this property to the field where the values of the sparkline are stored" of-type="SingleLine.Text" usage="bound" required="true" default-value="0,5,10,15,20,50,55"/>
+    <property name="DateSet" display-name-key="DateSet" description-key="Bind this property to the field where the values of the sparkline are stored" of-type="SingleLine.Text" usage="bound" required="true" default-value="2021-01-31,2021-02-31,2022-01-31,2022-04-31,2022-07-31,2022-09-31,2023-04-31"/>
+    
+    <property name="color" display-name-key="Cor" description-key="Cor do gráfico" of-type="SingleLine.Text" usage="input" required="true" default-value="blue" />
+    <property name="Height" display-name-key="Height" description-key="Default: 100" of-type="Whole.None" usage="input" required="true" default-value="100" />
+    <property name="Width" display-name-key="Width" description-key="Default: 400" of-type="Whole.None" usage="input" required="true" default-value="400" />
+    <property name="MaxValue" display-name-key="Max Value" description-key="Maximum value the graph can have. The higher the value, the smaller the graphic size." of-type="Whole.None" usage="input" required="true" default-value="100" />
+    
+    <external-service-usage enabled="false">
+    </external-service-usage>
+    <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
+    <property name="sampleProperty" display-name-key="Property_Display_Key" description-key="Property_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" />
+    <resources>
+      <code path="index.ts" order="1"/>
+    </resources>
+  </control>
+</manifest>
